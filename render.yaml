@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python your_bot_script.py"
+    envVars:
+      - key: API_ID
+        fromEnv: API_ID
+      - key: API_HASH
+        fromEnv: API_HASH
+      - key: BOT_TOKEN
+        fromEnv: BOT_TOKEN
+      - key: OWNER_ID
+        fromEnv: OWNER_ID
+      - key: WORKERS
+        fromEnv: WORKERS
+      - key: DATABASE_URL
+        fromEnv: DATABASE_URL
+      - key: UPDATES_CHANNEL
+        fromEnv: UPDATES_CHANNEL
+      - key: SESSION_NAME
+        fromEnv: SESSION_NAME
+      - key: FORCE_SUB_ID
+        fromEnv: FORCE_SUB_ID
+      - key: FORCE_UPDATES_CHANNEL
+        fromEnv: FORCE_UPDATES_CHANNEL
+      - key: SLEEP_THRESHOLD
+        fromEnv: SLEEP_THRESHOLD
+      - key: FILE_PIC
+        fromEnv: FILE_PIC
+      - key: START_PIC
+        fromEnv: START_PIC
+      - key: VERIFY_PIC
+        fromEnv: VERIFY_PIC
+      - key: FLOG_CHANNEL
+        fromEnv: FLOG_CHANNEL
+      - key: ULOG_CHANNEL
+        fromEnv: ULOG_CHANNEL
+      - key: MODE
+        fromEnv: MODE
+      - key: AUTH_USERS
+        fromEnv: AUTH_USERS
+      - key: PORT
+        fromEnv: PORT
+      - key: BIND_ADDRESS
+        fromEnv: BIND_ADDRESS
+      - key: PING_INTERVAL
+        fromEnv: PING_INTERVAL
+      - key: HAS_SSL
+        fromEnv: HAS_SSL
+      - key: NO_PORT
+        fromEnv: NO_PORT
+      - key: FQDN
+        fromEnv: FQDN
